@@ -1,0 +1,189 @@
+@import "vars"
+
+/*==========  Desktop First  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px)
+  #my-header
+    .main-menu
+      ul
+        li
+          a
+            min-width: 0px
+      &:before
+        top: -15px
+        left: -4px
+        bottom: -14px
+        right: 4px
+    .lvl2-cat
+      .item.basket
+        min-width: 20px
+        width: 40px
+        svg
+          top: 3px
+          position: relative
+  .main-slider
+    .slick-dots
+      left: calc(50% - 480px + 15px)
+    .slick-prev
+      left: calc(50% + 480px - 135px)
+    .slick-next
+      left: calc(50% + 480px - 70px)
+  .services
+    .printer-bg .content-s
+      width: 466px
+    .service-list
+      .content-s
+        width: 466px
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px)
+  #my-footer .lvl1
+    .contact-us
+      margin-top: 30px
+    .cont-data
+      margin-top: 27px
+  .services
+    .printer-bg
+      min-height: 270px
+      .content-s
+        width: 720px
+        margin: auto
+    .service-list
+      .content-s
+        width: 720px
+        margin: auto
+        padding-left: 0px
+        padding-bottom: 30px
+  .prod-cat .item-cont .item
+    padding: 0 10px
+  #my-header
+    .button--moema
+      background: #0c539e
+      color: #fff
+      min-width: 0px
+    .logo-cont-h
+      margin-top: 30px
+  .main-slider
+    .slick-dots
+      left: calc(50% - 360px + 15px)
+    .slick-prev
+      left: calc(50% + 360px - 135px)
+    .slick-next
+      left: calc(50% + 360px - 70px)
+  .partners .part-items-cont .item .txt-block .h3
+    margin-top: 20px
+    margin-bottom: 5px
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px)
+  #my-footer .lvl2
+    .main-m
+      margin-bottom: 50px
+    .pers-war p
+      margin-top: -5px
+      text-align: left
+  .services
+    .printer-bg
+      .content-s
+        width: 540px
+        margin: auto
+    .service-list
+      .content-s
+        width: 540px
+        margin: auto
+        padding-left: 0px
+        padding-bottom: 30px
+  .tel-small-cont
+    height: 43px
+    text-align: center
+    position: relative
+    animation: shake 5s cubic-bezier(.36,.07,.19,.97) both infinite
+    svg
+      transform: scale(0.7)
+  #my-header
+    .button--moema:before
+      top: -15px
+      left: -6px
+      bottom: -11px
+      right: -3px
+    .lvl2-cat
+      .item.basket
+        padding-left: 5px
+      .item
+        .txt
+          font-size: 12px
+          font-weight: 500
+        .svg-cont
+          margin-right: 3px
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 576px)
+  #my-footer .lvl2 .main-m
+    margin-bottom: 0px
+  #my-footer .lvl2 .h3
+    margin-top: 30px
+  #my-footer .lvl2 .pers-war p
+    margin-top: 30px
+    text-align: left
+    padding-left: 10px
+  .services
+    .printer-bg
+      min-height: 270px
+      .content-s
+        width: 100%
+        margin: auto
+        padding: 30px 15px
+    .service-list
+      .content-s
+        padding-left: 15px
+        padding-right: 15px
+        width: 100%
+        margin: auto
+        padding-bottom: 30px
+
+  #my-header
+    .container
+      width: 100%
+    .lvl2-cat
+      .item
+        width: 100%
+      .item
+        .txt
+          font-weight: 700
+          font-size: 14px
+        &.find-btn
+          min-width: 40px
+        &.basket
+          margin-right: 0px
+          min-width: 40px
+
+  .slick-menu-top
+    padding: 0px
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px)
+	/**/
+
+
+/*==========  Mobile First  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px)
+	/**/
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px)
+	/**/
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px)
+  /**/
+
+
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px)
+  /**/
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px)
+  .container
+    width: 1170px
+    max-width: 100%
+

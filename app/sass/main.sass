@@ -1,0 +1,1571 @@
+@import "fonts"
+@import "libs"
+@import "vars"
+
+*
+	outline: none!important
+
+*::-webkit-input-placeholder
+	color: #989898
+	opacity: 1
+	font-size: 18px
+	font-weight: 300
+	font-family: $default-font
+
+*:-moz-placeholder
+	color: #989898
+	opacity: 1
+	font-size: 18px
+	font-weight: 300
+	font-family: $default-font
+
+*::-moz-placeholder
+	color: #989898
+	opacity: 1
+	font-size: 18px
+	font-weight: 300
+	font-family: $default-font
+
+*:-ms-input-placeholder
+	color: #989898
+	opacity: 1
+	font-size: 18px
+	font-weight: 300
+	font-family: $default-font
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+html, body
+	height: auto
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.75
+	font-family: $default-font
+	//overflow-x: hidden
+	opacity: 1
+	margin: 0px
+*
+	transition: color .3s ease, opacify .3s ease, border-color .3s ease, background .3s ease
+	font-family: $default-font
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+.h1, h1
+	font-family: $default-font
+	font-size: 36px
+	color: $dark
+	font-weight: 900
+.h2, h2
+	font-family: $default-font
+	font-weight: 900
+	font-size: 25px
+	color: $dark
+.h3, h3, .h4, h4, .h5, h5
+	font-family: $default-font
+	font-size: 18px
+	font-weight: 900
+	color: $dark
+
+p
+	font-family: $default-font
+	font-size: 16px
+	color: $dark
+	font-weight: 500
+	line-height: 26px
+a
+	text-decoration: none
+	color: $dark
+	&:focus
+		text-decoration: none
+		color: $accent
+	&:hover, &:focus
+		text-decoration: none
+		color: $accent
+//button:not(.btn-flat)
+//	-webkit-appearance: button-bevel
+
+input
+	font-family: $default-font
+	display: inline-block
+	border: solid 1px #d9d9d9
+	font-size: 18px
+	font-weight: 500
+	height: 36px
+	line-height: 36px
+	padding-left: 20px
+	position: relative
+	top: 0px
+	vertical-align: top
+	border-radius: 5px
+
+@-webkit-keyframes fadeEffect
+	0%
+		opacity: 0
+	50%
+		opacity: 0
+	100%
+		opacity: 1
+
+@keyframes bgMove
+	0%
+		background-position: 0px
+	50%
+		background-position: 15px
+	100%
+		background-position: 0px
+
+@keyframes fade-translate
+	0%
+		transform: translate3d(0px, -50px, 0px)
+		opacity: 0
+	50%
+		transform: translate3d(0px, -50px, 0px)
+		opacity: 0
+	100%
+		transform: translate3d(0px, 0px, 0px)
+		opacity: 1
+@keyframes fade-translateBottom
+	0%
+		transform: translate3d(0px, 50px, 0px)
+		opacity: 0
+	50%
+		transform: translate3d(0px, 50px, 0px)
+		opacity: 0
+	100%
+		transform: translate3d(0px, 0px, 0px)
+		opacity: 1
+@keyframes fade-translateLeft
+	0%
+		transform: translate3d(-50px, -50%, 0px)
+		opacity: 0
+	50%
+		transform: translate3d(-50px, -50%, 0px)
+		opacity: 0
+	100%
+		transform: translate3d(0px, -50%, 0px)
+		opacity: 1
+@keyframes fade-translateRight
+	0%
+		transform: translate3d(50px, -50%, 0px)
+		opacity: 0
+	50%
+		transform: translate3d(50px, -50%, 0px)
+		opacity: 0
+	100%
+		transform: translate3d(0px, -50%, 0px)
+		opacity: 1
+@keyframes ani-mouse
+	0%
+		opacity: 1
+		top: 29%
+	15%
+		opacity: 1
+		top: 50%
+	50%
+		opacity: 0
+		top: 50%
+
+	100%
+		opacity: 0
+		top: 29%
+@keyframes shake
+	2%, 18%
+		transform: translate3d(-1px, 0, 0)
+	4%, 16%
+		transform: translate3d(2px, 0, 0)
+	6%, 10%, 14%
+		transform: translate3d(-4px, 0, 0)
+	8%, 12%
+		transform: translate3d(4px, 0, 0)
+	100%
+.text-center
+	text-align: center
+::selection
+	background: $accent /* Safari */
+	color: #FFFFFF
+::-moz-selection
+	background: $accent /* Firefox */
+
+#return-to-top
+	position: fixed
+	z-index: 2
+	bottom: 16px
+	right: 20px
+	background: $accent
+	width: 40px
+	height: 40px
+	display: block
+	text-decoration: none
+	-webkit-border-radius: 35px
+	-moz-border-radius: 35px
+	border-radius: 35px
+	display: none
+	-webkit-transition: all 0.3s linear
+	-moz-transition: all 0.3s ease
+	-ms-transition: all 0.3s ease
+	-o-transition: all 0.3s ease
+	transition: all 0.3s ease
+	border: solid 1px $accent
+	i
+		color: #FFFFFF
+		margin: 0
+		position: relative
+		left: 10px
+		top: 5px
+		font-size: 19px
+		-webkit-transition: all 0.3s ease
+		-moz-transition: all 0.3s ease
+		-ms-transition: all 0.3s ease
+		-o-transition: all 0.3s ease
+		transition: all 0.3s ease
+	&:hover, &:focus
+		background: rgba($accent, 0.8)
+		i
+			color: #fff
+			top: 5px
+
+
+.mm-menu.mm-offcanvas.mm-bottom, .mm-menu.mm-offcanvas.mm-top
+	//height: calc(100% - 91px)
+	max-height: 3000px
+.hamburger
+	position: relative
+	-webkit-appearance: button-bevel!important
+	padding: 0px
+	display: flex
+	align-items: center
+.hamburger-inner, .hamburger-inner:after, .hamburger-inner:before
+	height: 2px
+	background: $dark
+	width: 24px
+.hamburger-box
+	width: 24px
+.hamburger--emphatic .hamburger-inner:after
+	top: 7px
+.hamburger-inner:after
+	bottom: -9px
+.hamburger-inner:before
+	top: -9px
+.hamb-cont
+	text-align: right
+	display: inline-block
+	height: 50px
+	vertical-align: top
+
+html.mm-opening .mm-menu~.mm-slideout
+	transform: translate(0px,0)!important
+	transform: translate3d(0,0,0)!important
+#my-menu
+	background-color: #FFFFFF
+	z-index: 12
+	top: 47px
+	max-width: 325px
+	background-image: url(../img/bg-gr.png)
+	background-position: right
+	&:not(.mm-menu)
+		display: none
+	.mm-title
+		color: $dark
+		border-color: #000000
+		font-size: 18px
+		line-height: 50px
+		padding: 0px
+		font-weight: 300
+	.mm-next:after, .mm-prev:before
+		width: 15px
+		height: 15px
+	&.mm-menu .mm-btn:after, &.mm-menu .mm-btn:before
+		border-color: #FFFFFF
+	.mm-navbar .mm-btn:first-child
+		top: 3px
+	.mm-navbar
+		border-color: #444243
+		line-height: 50px
+		height: 50px
+	.mm-next
+		color: #FFFFFF
+		border-left-color: transparent
+		&:after
+			border-color: #FFFFFF
+	.mm-listview
+		position: relative
+		.mm-listview
+		li
+			&:first-child a
+				padding-top: 14px
+			&.active
+				color: $accent
+			&:hover
+				background: #444243
+				color: $accent
+			text-align: left
+			font-family: $default-font
+			font-size: 14px
+			font-weight: 900
+			border-color: transparent
+			color: $dark
+	.mm-listview>li>a, .mm-listview>li>span
+		padding: 10px 10px 10px 40px
+		border-bottom: 1px solid $grey
+		font-weight: 300
+	.mm-listview .mm-next+a, .mm-listview .mm-next+span
+		margin-right: 0px
+	.mm-hasnavbar
+		.mm-listview
+		li
+			&:first-child a
+				padding-top: 10px
+				margin-top: 10px
+.content
+	overflow-x: hidden
+	h1
+		text-align: center
+		font-family: $default-font
+		margin-top: 63px
+		font-size: 30px
+		text-transform: uppercase
+		position: relative
+		padding-bottom: 55px
+		margin-bottom: 14px
+		&:after
+			content: ''
+			position: absolute
+			width: 3px
+			height: 50px
+			background: $accent
+			left: 50%
+			transform: translateX(-50%)
+			bottom: -6px
+	h2
+		font-size: 24px
+		font-weight: 500
+		margin: 15px 0
+		margin-top: 30px
+		text-transform: uppercase
+		color: $accent
+	h3
+		font-size: 22px
+		font-weight: 500
+		margin: 15px 0
+		margin-top: 30px
+		text-transform: uppercase
+		color: $accent
+	h4
+		font-size: 20px
+		font-weight: 500
+		margin: 15px 0
+		margin-top: 30px
+		text-transform: uppercase
+		color: $accent
+	h5
+		font-size: 18px
+		font-weight: 500
+		margin: 15px 0
+		margin-top: 30px
+		text-transform: uppercase
+		color: $accent
+	h6
+		font-size: 16px
+		font-weight: 500
+		margin: 15px 0
+		margin-top: 30px
+		text-transform: uppercase
+		color: $accent
+	b
+		font-size: 16px
+		font-weight: 900
+	p
+		font-size: 16px
+		line-height: 26px
+		margin-bottom: 20px
+		max-width: 850px
+		font-weight: 500
+	a
+		color: $accent
+		&:hover, &:focus
+			text-decoration: underline
+	blockquote
+		font-weight: 900
+		font-size: 16px
+		line-height: 1.2
+		max-width: 360px
+		//padding-left: 45px
+		margin: 10px 0
+		position: relative
+		border-top: solid 3px $accent
+		border-bottom: solid 3px $accent
+		padding: 25px 0
+		//&:before
+		//	content: url('data:image/svg+xml; utf8, <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="31px" height="25px"><path fill-rule="evenodd"  fill="rgb(130, 182, 61)" d="M30.955,9.986 C30.899,11.881 30.652,13.744 29.950,15.516 C28.384,19.472 25.717,22.370 21.889,24.141 C21.330,24.400 20.765,24.646 20.191,24.904 C19.151,23.124 18.134,21.382 17.112,19.632 C19.722,18.382 21.435,16.442 21.937,13.469 C21.680,13.442 21.468,13.439 21.265,13.397 C19.324,12.995 18.036,11.772 17.298,9.964 C16.678,8.444 16.606,6.840 17.072,5.265 C17.752,2.967 19.393,1.697 21.618,1.128 C21.969,1.038 22.331,0.996 22.689,0.931 C23.155,0.931 23.621,0.931 24.088,0.931 C24.604,1.026 25.130,1.083 25.634,1.221 C28.266,1.939 29.824,3.750 30.584,6.342 C30.933,7.529 30.992,8.754 30.955,9.986 ZM13.220,15.709 C11.597,19.674 8.853,22.523 4.993,24.259 C4.514,24.474 4.031,24.680 3.531,24.898 C2.497,23.127 1.480,21.386 0.457,19.633 C3.066,18.380 4.779,16.441 5.281,13.470 C5.013,13.441 4.800,13.439 4.596,13.393 C2.328,12.874 0.972,11.376 0.387,9.158 C-0.015,7.635 0.001,6.079 0.644,4.612 C1.538,2.575 3.172,1.488 5.277,1.062 C5.523,1.013 5.771,0.975 6.019,0.931 C6.485,0.931 6.952,0.931 7.418,0.931 C7.934,1.025 8.461,1.081 8.965,1.219 C11.686,1.962 13.251,3.850 13.980,6.540 C14.321,7.797 14.337,9.087 14.283,10.378 C14.206,12.211 13.918,14.003 13.220,15.709 Z"/></svg>')
+		//	display: block
+		//	width: 22px
+		//	height: 10px
+		//	position: absolute
+		//	left: 0px
+		//	top: 0px
+	table
+		width: 100%
+		tbody
+			min-width: 700px
+		&.compectCount
+			.prev-prod
+				width: 60px
+				height: 60px
+				margin: auto
+				margin-bottom: 15px
+				margin-top: 15px
+				background-size: contain
+				background-repeat: no-repeat
+				background-position: center
+				background-color: #FFFFFF
+				border: solid 1px #d9d9d9
+		tr
+			&:nth-child(odd)
+				background: #f7f7f7
+			td, th
+				border: solid 1px #d9d9d9
+				padding-left: 15px
+				padding-right: 15px
+				text-align: center
+	ul
+		list-style: none
+		margin-top: 20px
+		li
+			position: relative
+			font-weight: 500
+			font-size: 16px
+			margin-bottom: 20px
+			&:before
+				content: ''
+				display: block
+				width: 10px
+				height: 10px
+				position: absolute
+				left: -25px
+				top: 7px
+				background: $accent
+				border-radius: 50%
+			ul
+				margin-top: 0px
+				li
+					font-size: 12px
+					font-weight: 700
+					&:before
+						content: ''
+						display: block
+						width: 15px
+						height: 1px
+						background: $accent
+						position: absolute
+						left: -25px
+						top: 50%
+						transform: translateY(-50%)
+	ol
+		list-style-type: none
+		counter-reset:  item
+		padding-left: 0px
+		margin-top: 20px
+		li
+			font-weight: 700
+			&:before
+				content: counter(item) ') '
+				counter-increment: item
+
+.breadcrumb
+	padding: 0
+	margin-bottom: 20px
+	list-style: none
+	background-color: transparent
+	-webkit-border-radius: 4px
+	border-radius: 4px
+	margin: 15px 0px
+	margin-top: 45px
+	text-align: left
+	padding-left: 49px
+	li
+		display: inline-block
+		font-size: 14px
+		&.active
+			span
+				border-bottom: solid 1px #989898
+				color: #989898
+		a
+			color: #989898
+			&:hover, &:focus
+				color: $accent
+				text-decoration: none
+	&>li+li:before
+		content: " | "
+		padding: 0 10px
+		color: $dark
+		font-weight: 500
+.B_crumbBox
+	padding: 0
+	margin-bottom: 20px
+	list-style: none
+	background-color: transparent
+	-webkit-border-radius: 4px
+	border-radius: 4px
+	margin: 34px 0px
+	margin-bottom: 40px
+	position: relative
+	z-index: 4
+	.B_lastCrumb
+		display: none
+	.B_currentCrumb
+		color: #000 !important
+		display: inline
+	li
+		display: inline-block
+		font-size: 13px
+		&:hover, &:focus
+			color: #000
+		&:hover, &:focus
+			color: $accent
+	&>li+li:before
+		content: "/\00a0"
+		padding: 0 5px
+		color: #ccc
+.pag-cont
+	text-align: right
+	margin-bottom: 50px
+.pagination
+	padding: 0px
+	display: inline-block
+	margin-top: 20px
+	margin-bottom: 5px
+	.arr
+		min-width: 160px
+		min-height: 35px
+		border: solid 1px #b4b4b4
+		line-height: 35px
+		font-size: 14px
+		font-weight: 500
+		border-radius: 5px
+		&.disabled
+			a
+				color: #b4b4b4
+				pointer-events: none
+				cursor: default
+				transition: background .3s ease
+			&:hover, &:focus
+				background-color: transparent
+				border-color: #b4b4b4
+		&.prev
+			.fa
+				padding-right: 10px
+		&.next
+			.fa
+				padding-left: 10px
+	li
+		margin-bottom: 15px
+		margin-right: 10px
+		width: 35px
+		height: 35px
+		display: inline-block
+		text-align: center
+		line-height: 35px
+		border: solid 1px  #b4b4b4
+		position: relative
+		border-radius: 5px
+		transition: background .3s ease
+		&.dots
+			border: none
+		&:not(.dots):hover
+			background-color: $accent
+			border-color: $accent
+		a
+			font-size: 14px
+			font-weight: 500
+			display: inline-block
+			width: 100%
+			height: 100%
+			color: #000
+			transition: background .3s ease
+			&:hover, &:focus
+				text-decoration: none
+				color: #ffffff
+		&:last-child
+			margin-right: 0px
+		&.active
+			background-color: $accent
+			border-color: $accent
+			a
+				color: #ffffff
+				transition: background .3s ease
+
+
+
+#consult
+	background-image: url(../img/bg-gr.png)
+	background-position: right
+	.container
+		max-width: 460px
+		height: 100%
+		justify-content: center
+		align-items: center
+		display: flex
+	.h4
+		color: $dark
+		font-size: 25px
+		font-weight: 900
+		margin-bottom: 25px
+	p
+		color: $dark
+		margin-top: 20px
+		font-size: 16px
+		b
+			font-weight: 900
+	a
+		color: $dark
+		&:hover, &:focus
+			text-decoration: underline
+	label
+		color: $dark!important
+	input
+		display: block
+		width: 100%
+		background: rgba(255, 255, 255, 0.26)
+		border: solid 1px #6d6d6d
+		line-height: 40px
+		color: $dark
+		margin-bottom: 10px
+		border-radius: 0px
+		padding-left: 15px
+		&::-webkit-input-placeholder
+			color: #6d6d6d
+			opacity: 1
+			font-size: 14px
+			font-weight: 500
+		&:-moz-placeholder
+			color: #6d6d6d
+			opacity: 1
+			font-size: 14px
+			font-weight: 500
+		&::-moz-placeholder
+			color: #6d6d6d
+			opacity: 1
+			font-size: 14px
+			font-weight: 500
+	textarea
+		width: 100%
+		resize: none
+		border: solid 1px #6d6d6d
+		padding-left: 15px
+		background: rgba(255, 255, 255, 0.26)
+		font-size: 18px
+		&::-webkit-input-placeholder
+			color: #6d6d6d
+			opacity: 1
+			font-size: 14px
+			font-weight: 500
+		&:-moz-placeholder
+			color: #6d6d6d
+			opacity: 1
+			font-size: 14px
+			font-weight: 500
+		&::-moz-placeholder
+			color: #6d6d6d
+			opacity: 1
+			font-size: 14px
+			font-weight: 500
+	.client-msg
+		display: none
+	.fancybox-close-small
+		position: absolute
+		top: 10px
+		right: 5px
+		width: 28px
+		height: 22px
+		&:after
+			background: transparent
+			font-weight: 600
+			font-size: 35px
+			color: $dark
+			top: -5px
+			right: 0px
+			outline: none!important
+			transition: color .3s ease
+		&:hover, &:focus
+			&:after
+				color: darken($dark, 40)
+	.content-txt
+		text-align: center
+		position: relative
+		padding-top: 80px
+		//top: 50%
+		//transform: translateY(-50%)
+		vertical-align: middle
+		max-width: 330px
+		margin: auto
+		.h1
+			color: $dark
+			font-size: 45px
+		.txt-p
+			color: $dark
+			font-size: 18px
+			font-weight: 500
+	.btn-accent
+		font-size: 18px
+		cursor: pointer
+	button
+		cursor: pointer
+/*buttons start*/
+.btn-underline
+	border-bottom: 1px $accent dashed
+	color: #ffffff
+	&:hover, &:focus
+		color: $accent
+.btn-green
+	background: $accent
+	display: inline-block
+	color: #ffffff
+	padding: 10px 45px
+	border-radius: 120px
+	font-size: 16px
+	&:hover, &:focus
+		background: darken($accent, 5)
+		color: #ffffff
+.btn-accent
+	background: $accent
+	text-align: right
+	padding: 10px 45px
+	border-radius: 5px
+	font-size: 23px
+	color: #FFFFFF
+	&:hover, &:focus
+		background: $dark
+		color: #FFFFFF
+.btn-white
+	background: #ffffff
+	display: inline-block
+	color: $dark
+	padding: 11px 35px
+	border-radius: 120px
+	font-size: 16px
+	border: solid 1px transparent
+	-webkit-appearance: button
+	&:hover, &:focus
+		background: $accent
+		color: #ffffff
+		cursor: pointer
+		border-color: #ffffff
+.btn-dark
+	background: $dark
+	display: inline-block
+	color: #ffffff
+	padding: 10px 59px
+	border-radius: 120px
+	font-size: 16px
+	border: none
+	text-decoration: none
+	&:hover, &:focus
+		background: lighten($dark, 5)
+		color: #ffffff
+		cursor: pointer
+		text-decoration: none
+
+.dark-input
+	background: $dark
+	border-color: $dark
+	padding-left: 15px
+	border-radius: 150px
+	color: #ffffff
+	min-height: 48px
+	&::-webkit-input-placeholder
+		color: #ffffff
+		opacity: 1
+		font-size: 14px
+		font-weight: 500
+	&:-moz-placeholder
+		color: #ffffff
+		opacity: 1
+		font-size: 14px
+		font-weight: 500
+	&::-moz-placeholder
+		color: #ffffff
+		opacity: 1
+		font-size: 14px
+		font-weight: 500
+	&:-ms-input-placeholder
+		color: #ffffff
+		opacity: 1
+		font-size: 14px
+		font-weight: 500
+
+
+.btn-transparent
+	border: solid 1px $accent
+	border-radius: 5px
+	padding: 10px 50px
+	font-size: 23px
+	svg
+		position: relative
+		top: 7px
+		right: 10px
+	&:after
+		content: ''
+		width: 100%
+/*buttons end*/
+
+/*my custom select start*/
+.my-select
+	position: relative
+	&.active
+		.select-value
+			border-bottom-left-radius: 0px
+		button
+			transform: rotate(180deg)
+	.select-value
+		padding-right: 45px
+		padding-left: 10px
+		border: solid 1px #d9d9d9
+		font-size: 18px
+		font-weight: 300
+		height: 36px
+		line-height: 36px
+		border-bottom-left-radius: 5px
+		border-top-left-radius: 5px
+		color: $accent
+		user-select: none
+		cursor: pointer
+		transition: border-radius .3s ease
+	button
+		position: absolute
+		right: 15px
+		top: 0px
+		background: transparent
+		border: none
+		padding: 0px
+		cursor: pointer
+		line-height: 36px
+	ul
+		margin: 0px
+		padding: 0px
+		list-style: none
+		border: solid 1px #d9d9d9
+		width: 100%
+		display: block
+		position: relative
+		top: -3px
+		border-top-color: transparent
+		padding: 15px 0px
+		position: absolute
+		top: 35px
+		display: none
+		border-bottom-left-radius: 5px
+		background: #FFFFFF
+		z-index: 2
+		li
+			color: $dark
+			width: 100%
+			padding: 0 10px
+			&:hover, &:focus
+				background: rgba($accent, 0.3)
+				cursor: pointer
+			&.selected
+				background: rgba($accent, 0.1)
+/*my custom select END*/
+
+/*merkuriy start*/
+.fotorama__nav__shaft
+	margin-top: 15px
+.fotorama__nav:after, .fotorama__stage:after
+	background-image: none
+	background: none
+.fotorama__nav:before, .fotorama__stage:before
+	background-image: none
+	background: none
+
+.button--isi
+	background: $accent
+	margin: 0px
+	border-radius: 5px
+	min-width: auto
+	color: #FFFFFF
+	font-size: 12px
+	font-weight: 500
+	border-radius: 30px
+	padding-top: 10px
+	padding-bottom: 10px
+	text-transform: none
+	&:before
+		background: $accent2
+	&:hover
+		color: #FFFFFF
+.button--moema
+	padding: 0 15px
+	background: $accent
+	cursor: pointer
+	font-size: 16px
+	text-transform: none
+	letter-spacing: 0
+	font-weight: 500
+	margin: 0px
+	text-align: center
+	font-size: 14px
+	font-weight: 500
+	&.red-moema
+		&:hover
+			background: $accent2!important
+			font-weight: 900!important
+	&.dark-moema
+		&:hover
+			background: $accent-dark!important
+			font-weight: 900!important
+	&:hover
+		background: $dark
+	&:before
+		top: -15px
+		left: -20px
+		bottom: -14px
+
+#my-header
+	padding-top: 44px
+	.slick-menu-top
+		position: fixed
+		width: 100%
+		top: 0
+		min-height: 44px
+		background: #fff
+		z-index: 3
+		box-shadow: 0px 1px 4.65px 0.35px rgba(0, 0, 0, 0.26)
+	.main-menu
+		ul
+			list-style: none
+			padding: 0px
+			margin: 0px
+			li
+				&:first-child
+					a
+						background: $accent
+						color: #FFFFFF
+				display: block
+	.button--moema
+		padding: 5px 15px
+		background: #FFFFFF
+		color: $dark
+		&:hover
+			background: $accent
+			color: #FFFFFF
+		&:before
+			top: -15px
+			left: -20px
+			bottom: -14px
+	.lvl2-cat
+		min-height: 130px
+		position: relative
+		.item
+			border: solid 1px $grey
+			font-size: 14px
+			font-weight: 700
+			padding-right: 10px
+			cursor: pointer
+			height: 40px
+			width: 170px
+			display: flex
+			align-items: center
+			margin-right: 9px
+			overflow: hidden
+			a
+				transition: none
+			&:hover
+				//background: $accent
+				a
+					color: #FFFFFF
+				.svg-cont
+					&:after
+						width: 300px
+						height: 300px
+			.svg-cont
+				background: $accent
+				margin-left: 5px
+				margin-right: 12px
+				width: 34px
+				height: 34px
+				border-radius: 50%
+				position: relative
+				&:after
+					content: ''
+					width: 34px
+					height: 34px
+					position: absolute
+					background: $accent
+					border-radius: 50%
+					display: block
+					z-index: -1
+					transition: all .8s ease
+				svg
+					display: block
+					width: 34px
+					height: 34px
+					left: 5px
+					position: relative
+					padding-top: 9px
+					padding-left: 3px
+			&.find-btn
+				padding: 0px
+				width: 40px
+				height: 40px
+				button
+					width: 100%
+					height: 100%
+					display: block
+					cursor: pointer
+					background: #FFFFFF
+					border: none
+					&:hover
+						background: $accent
+						svg
+							path
+								fill: #ffffff
+			.txt
+				line-height: 1
+				display: block
+			&.basket
+				min-width: 188px
+				padding-left: 8px
+				.txt
+					line-height: 1
+					padding-left: 10px
+				.txt-b
+					line-height: 1
+					font-size: 16px
+					font-weight: 700
+				.summ
+					line-height: 1
+					font-size: 11px
+					font-weight: 700
+				&:hover
+					background: #FFFFFF
+					border-color: $accent
+					a
+						color: $dark
+					div
+						transition: none
+		.find-block
+			position: absolute
+			right: 10px
+			left: 0px
+			bottom: 7px
+			display: none
+			&:before
+				content: url('data:image/svg+xml; utf8, <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20px" height="19px"> <path fill-rule="evenodd" fill="rgb(217, 217, 217)" d="M7.754,0.000 C8.124,0.062 8.500,0.101 8.864,0.189 C10.986,0.706 12.573,1.932 13.614,3.849 C14.301,5.116 14.555,6.481 14.425,7.913 C14.334,8.914 14.039,9.857 13.545,10.735 C13.509,10.799 13.473,10.864 13.421,10.958 C13.792,11.321 14.169,11.685 14.540,12.056 C15.883,13.397 17.234,14.729 18.559,16.088 C19.033,16.573 19.094,17.209 18.924,17.840 C18.754,18.464 18.311,18.863 17.673,18.963 C17.049,19.062 16.463,18.951 15.984,18.469 C14.386,16.860 12.778,15.259 11.176,13.654 C11.102,13.580 11.043,13.491 11.005,13.445 C10.468,13.675 9.993,13.914 9.495,14.085 C8.328,14.483 7.126,14.582 5.916,14.329 C3.108,13.743 1.246,12.069 0.324,9.362 C0.171,8.912 0.130,8.423 0.036,7.952 C0.025,7.898 0.012,7.845 -0.000,7.791 C-0.000,7.420 -0.000,7.049 -0.000,6.678 C0.011,6.637 0.029,6.597 0.032,6.556 C0.092,5.837 0.253,5.140 0.541,4.481 C1.562,2.147 3.312,0.690 5.806,0.143 C6.093,0.080 6.387,0.047 6.678,0.000 C7.037,0.000 7.395,0.000 7.754,0.000 ZM2.072,7.279 C2.100,10.130 4.429,12.424 7.287,12.384 C10.125,12.345 12.397,10.064 12.385,7.194 C12.373,4.320 10.032,2.047 7.148,2.073 C4.323,2.100 2.044,4.437 2.072,7.279 Z"></path></svg>')
+				position: absolute
+				left: 5px
+				top: 5px
+				width: 30px
+				height: 30px
+				z-index: 2
+			input
+				width: 100%
+				height: 30px
+				border-radius: 0px
+				position: relative
+				display: block
+				padding-left: 28px
+			.button
+				background: $accent2
+				position: absolute
+				top: 5px
+				right: 15px
+				color: #FFFFFF
+				font-weight: 700
+				min-width: 0px
+				font-size: 12px
+				padding: 0px 10px
+				&:before
+					top: -11px
+					left: -4px
+					right: 0px
+					bottom: -10px
+
+
+.main-slider
+	width: 100%
+	margin-bottom: 0
+	overflow: hidden
+	max-height: 297px
+	//top: -9px
+	.item
+		position: relative
+		height: 297px
+		width: 100%
+		background: $grey-l
+		background-size: cover
+		&.slick-active
+			.slider-content
+				opacity: 1
+		.slider-content
+			//top: 50%
+			//transform: translateY(-50%)
+			//position: absolute
+			max-width: 920px
+			width: 100%
+			opacity: 0
+			transition: opacity 1s ease, left .5s ease
+			transition-delay: .2s
+			text-align: left
+			padding: 30px
+			padding-left: 0px
+			.h2, h2
+				font-size: 30px
+				font-weight: 900
+				color: #FFFFFF
+				position: relative
+			p
+				font-size: 25px
+				color: $dark
+				line-height: 25px
+				font-weight: 500
+				margin-bottom: 35px
+			.button--moema
+				text-align: center
+				padding: 8px 15px
+				float: none
+				max-width: 100px
+				background: $accent2
+				&:hover
+					background: $dark
+			.top-txt
+				font-weight: 900
+				font-size: 16px
+				color: #FFFFFF
+				position: relative
+				top: -50px
+		.bg
+			width: 100%
+			min-height: 450px
+			background-size: cover!important
+			opacity: 1
+			background-position: right!important
+	.slick-arrow
+		width: 50px
+		height: 50px
+		border-radius: 50%
+		background-color: $grey-l
+		bottom: -2px
+		top: auto
+		object
+			width: 25px
+			z-index: -1
+			position: relative
+	.slick-prev
+		left: calc(50% + 455px)
+		z-index: 1
+		transition: background-color .3s ease
+		svg
+			transform: scale(1.5)
+		path
+			fill: $dark
+		&:hover
+			background-color: rgba(#ffffff, 0.8)
+		object
+			top: -2px
+			left: -3px
+	.slick-next
+		left: calc(50% + 520px)
+		z-index: 1
+		transition: background-color .3s ease
+		svg
+			transform: scale(1.5)
+		path
+			fill: $dark
+		&:hover
+			background-color: rgba(#ffffff, 0.8)
+		object
+			top: -2px
+			left: 3px
+	.slick-next:before, .slick-prev:before
+		display: none
+	.slick-dots
+		bottom: 25px
+		width: auto
+		background-color: rgba(0, 0, 0, 0.412)
+		left: calc(50% - 570px)
+		border-radius: 50px
+	.slick-dots li.slick-active button:before
+		color: $accent2
+	.slick-dots li button:before
+		color: $grey-l
+		opacity: 1
+		font-size: 10px
+.slick-dotted.slick-slider
+	margin-bottom: 0px
+
+.about-sec
+	padding: 60px 0px
+	.cont
+		text-align: center
+		max-width: 835px
+		margin: auto
+		.h2
+			font-size: 30px
+			font-weight: 700
+		p
+			margin: 0px
+
+.sec-descrip
+	text-align: center
+	border-top: solid 1px $grey
+	border-bottom: solid 1px $grey
+	font-size: 30px
+	font-weight: 700
+	line-height: 1.2
+	padding: 20px 0px
+	p
+		color: $accent
+		font-size: 15px
+		margin: 0px
+
+.prod-cat
+	.container-fluid
+		padding: 0px
+	.category-list
+		margin-top: 20px
+	.icon-cat
+		background: $accent
+		width: 80px
+		height: 80px
+		border-radius: 50%
+		&:after
+			content: ''
+			width: 80px
+			height: 80px
+			position: absolute
+			background: $accent
+			border-radius: 50%
+			display: block
+			z-index: -1
+			transition: all .8s ease
+			background-image: url('../img/bgcat.png')
+			background-position: center
+	.item-cont
+		padding-left: 10px
+		padding-right: 10px
+		margin-bottom: 20px
+		.item
+			border: solid 1px $grey
+			border-radius: 5px
+			min-height: 173px
+			display: flex
+			justify-content: center
+			align-items: center
+			position: relative
+			overflow: hidden
+			.discr
+				transition: none
+			a
+				width: 100%
+				height: 100%
+			.cont-c
+				position: relative
+				z-index: 2
+			&:hover
+				.icon-cat
+					background: transparent
+					transition: none
+					&:after
+						width: 500px
+						height: 500px
+				.discr
+					color: #FFFFFF
+
+
+.partners
+	.sec-descrip
+		line-height: 1.9
+		padding: 40px 0
+	.part-items-cont
+		margin-top: 47px
+		.item
+			padding-top: 26px
+			padding-bottom: 26px
+			.prev
+				min-height: 374px
+				width: 100%
+				background-size: cover
+				background-position: center
+			.txt-block
+				.h3
+					font-size: 21px
+					font-weight: 900
+				p
+					font-size: 15px
+	.item-bg
+		background-color: $grey-l
+		padding: 26px
+		border-radius: 26px
+
+.services
+	margin-top: 75px
+	overflow: hidden
+	.container-fluid
+		.row>.col-12
+			padding: 0px
+	.printer-bg
+		min-height: 582px
+		width: 100%
+		background-color: $accent
+		position: relative
+		&:after
+			content: ''
+			position: absolute
+			top: 0px
+			left: 0px
+			right: 0px
+			bottom: 0px
+			background-image: url("../img/printBg.png")
+			background-position: center
+			background-size: cover
+			opacity: 0.17
+		.content-s
+			width: 566px
+			padding-right: 15px
+			.h3
+				color: #FFFFFF
+				font-size: 30px
+				font-weight: 700
+				padding-bottom: 50px
+				position: relative
+				margin: 0px
+				&:after
+					content: ''
+					width: 40px
+					height: 2px
+					background: #FFFFFF
+					position: absolute
+					bottom: 0
+					left: 0px
+				&+p
+					padding-top: 50px
+			p
+				color: #FFFFFF
+				font-weight: 500
+				font-size: 12px
+	.service-list
+		background: #eff4f8
+		height: 100%
+		.content-s
+			width: 566px
+			padding-left: 45px
+		ul
+			padding: 0px
+			margin: 0px
+			list-style: none
+			li
+				display: block
+				border-bottom: dashed 1px $dark
+				padding: 20px 0px
+				padding-left: 50px
+				position: relative
+				&:hover
+					a
+						color: $accent2
+						&:after
+							content: url('data:image/svg+xml; utf8, <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18px" height="18px"> <path fill-rule="evenodd"  fill="rgb(227, 30, 36)" d="M8.990,18.003 C3.993,17.974 -0.023,13.925 0.004,8.946 C0.031,3.987 4.100,-0.039 9.065,0.004 C14.030,0.047 18.003,4.035 18.002,8.994 C18.000,14.034 13.953,17.985 8.990,18.003 ZM7.155,3.396 C6.573,3.434 6.147,3.812 5.874,4.367 C5.637,4.848 5.761,5.394 6.153,5.789 C7.133,6.774 8.117,7.756 9.099,8.740 C9.314,8.954 9.314,9.052 9.100,9.266 C8.122,10.244 7.143,11.223 6.165,12.203 C5.865,12.503 5.726,12.863 5.774,13.286 C5.814,13.647 6.009,13.923 6.265,14.173 C6.855,14.750 7.616,14.762 8.199,14.180 C9.839,12.544 11.476,10.906 13.114,9.267 C13.326,9.055 13.325,8.950 13.113,8.738 C12.500,8.124 11.886,7.510 11.272,6.897 C10.243,5.869 9.213,4.842 8.186,3.812 C7.920,3.546 7.608,3.400 7.155,3.396 Z"/> </svg>')
+				a
+					&:after
+						content: url('data:image/svg+xml; utf8, <svg  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18px" height="18px"> <path fill-rule="evenodd"  fill="rgb(12, 84, 160)" d="M8.990,18.003 C3.993,17.974 -0.023,13.925 0.004,8.946 C0.031,3.987 4.100,-0.039 9.065,0.004 C14.030,0.047 18.003,4.035 18.002,8.994 C18.000,14.034 13.953,17.985 8.990,18.003 ZM7.155,3.396 C6.573,3.434 6.147,3.812 5.874,4.367 C5.637,4.848 5.761,5.394 6.153,5.789 C7.133,6.774 8.117,7.756 9.099,8.740 C9.314,8.955 9.314,9.052 9.100,9.266 C8.122,10.245 7.143,11.224 6.165,12.202 C5.865,12.502 5.726,12.864 5.774,13.286 C5.814,13.647 6.009,13.923 6.265,14.173 C6.855,14.750 7.616,14.762 8.199,14.181 C9.839,12.544 11.476,10.905 13.114,9.267 C13.326,9.055 13.325,8.951 13.113,8.738 C12.500,8.124 11.886,7.510 11.272,6.897 C10.243,5.869 9.213,4.842 8.186,3.812 C7.920,3.546 7.608,3.401 7.155,3.396 Z"/> </svg>')
+						position: absolute
+						left: 0px
+						top: 23px
+
+.preim
+	.sec-descrip
+		border: none
+		padding-top: 67px
+	.preim-cont
+		margin-top: 43px
+		&>.col-12
+			display: flex
+			justify-content: center
+		.item
+			display: flex
+			flex-direction: column
+			align-items: center
+			max-width: 260px
+			position: relative
+			padding: 20px 14px
+			margin-bottom: 20px
+			width: 263px
+			min-height: 200px
+			overflow: hidden
+			border-radius: 5px
+			a
+				display: block
+			&:hover
+				.icon-cat
+					background: transparent
+					transition: none
+					&:after
+						width: 500px
+						height: 500px
+				p, .h4
+					color: #FFFFFF
+			.h4
+				font-size: 16px
+				font-weight: 900
+				color: $accent
+				margin-top: 10px
+				position: relative
+				z-index: 2
+			p
+				color: #979797
+				font-size: 12px
+				font-weight: 700
+				line-height: 1.4
+				position: relative
+				z-index: 2
+		.icon-cat
+			background: $accent
+			width: 80px
+			height: 80px
+			border-radius: 50%
+			position: relative
+			z-index: 2
+			&:after
+				content: ''
+				width: 80px
+				height: 80px
+				position: absolute
+				background: $accent
+				border-radius: 50%
+				display: block
+				z-index: -1
+				transition: all .8s ease
+				background-image: url('../img/bgcat.png')
+				background-position: center
+
+.seo-b
+	.container-fluid
+		padding: 50px 0px
+		background-color: #eff4f8
+		background-image: url("../img/bg-gr.png")
+		background-position: right
+		min-height: 588px
+		background-repeat: repeat-y
+	.h-se
+		text-align: center
+		.h2
+			font-size: 30px
+			font-weight: 700
+		p
+			color: $accent
+			margin-bottom: 40px
+	p
+		text-align: center
+		font-size: 16px
+		font-weight: 500
+	.container
+		max-width: 930px
+#my-footer
+	.lvl1
+		margin-top: 12px
+		margin-bottom: 12px
+		.cont-data
+			p
+				margin-bottom: 0px
+		.contact-us
+			width: 100%
+			.item
+				background: $accent
+				min-width: 120px
+				width: 100%
+				min-height: 120px
+				border-radius: 5px
+				padding: 15px
+				&:first-child
+					margin-right: 10px
+					cursor: pointer
+				.svg-cont.mail-cont
+					margin-top: 24px
+				.h5
+					font-size: 12px
+					font-weight: 900
+					color: #FFFFFF
+				.soc-list
+					padding: 0px
+					margin: 0px
+					list-style: none
+					.svg-cont
+						background: #FFFFFF
+						width: 18px
+						height: 18px
+						border-radius: 50%
+						svg
+							position: relative
+							left: 3px
+							top: 1px
+					li
+						margin-bottom: 4px
+					li:nth-child(2)
+						.svg-cont
+							svg
+								left: 6px
+								top: 2px
+					li:nth-child(3)
+						.svg-cont
+							svg
+								left: 2px
+								top: 0px
+					a
+						color: #FFFFFF
+						font-size: 12px
+						.txt
+							margin-left: 8px
+	.lvl2
+		padding-top: 70px
+		background-color: $accent
+		background-image: url('../img/footer-bg.png')
+		background-size: cover
+		.pers-war
+			p
+				text-align: center
+				color: #FFFFFF
+				font-size: 12px
+				margin-top: 50px
+				margin-bottom: 15px
+		.h3
+			color: #FFFFFF
+			font-weight: 900
+			font-size: 16px
+			padding-left: 10px
+		ul
+			list-style: none
+			padding: 0px
+			margin: 0px
+			li
+				display: block
+				margin: 7px 0px
+				a
+					color: #FFFFFF
+					font-weight: 500
+					font-size: 14px
+					display: inline-block
+					float: none
+			.button--moema
+				padding: 0px 10px
+				min-width: 0px
+				background: transparent
+		.main-m
+			margin-top: -17px
+	.lvl3
+		background: $accent-dark
+		padding: 12px 0px
+		p
+			margin: 0px
+			font-size: 12px
+			color: #FFFFFF
+/*merkuriy end*/
+
+@import "media" // Всегда в конце
