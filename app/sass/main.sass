@@ -267,7 +267,7 @@ html.mm-opening .mm-menu~.mm-slideout
 #my-menu
 	background-color: #FFFFFF
 	z-index: 12
-	top: 47px
+	top: 44px
 	max-width: 325px
 	background-image: url(../img/bg-gr.png)
 	background-position: right
@@ -1820,6 +1820,10 @@ html.mm-opening .mm-menu~.mm-slideout
 				border-radius: 0px
 				width: 100%
 				margin-top: 10px
+				max-width: 100%
+				margin-bottom: -1px
+				&:before
+					width: 290px
 			.prev
 				min-height: 150px
 				width: 100%
@@ -1830,6 +1834,7 @@ html.mm-opening .mm-menu~.mm-slideout
 				font-weight: 700
 				font-size: 14px
 				padding: 0px 15px
+				line-height: 1.7
 			.price
 				font-weight: 900
 				font-size: 22px
@@ -1944,7 +1949,10 @@ html.mm-opening .mm-menu~.mm-slideout
 		font-weight: 700
 		color: #BEBEBE
 		margin: 0px
-
+.an-h
+	font-size: 30px
+	font-weight: 700
+	text-align: center
 .basket-add-fixed-cont
 	display: none
 .basket-add-fixed
@@ -1982,8 +1990,162 @@ html.mm-opening .mm-menu~.mm-slideout
 				font-weight: 700
 				margin: 0px
 				line-height: 1.4
+
+.an-h
+	margin: 35px 0px
+
+.catalog-cont.catalog-cont-ls .new-i:before
+	left: 0px
+
 //category-podcategory end
 
+.catalog-cont.goods-item
+	.item-cont-ls
+		margin-bottom: 0px
+		&:hover
+			border-color: #ddd
+		&>.item
+			padding-bottom: 15px
+	.prop-i
+		margin-bottom: 30px
+	.sklad
+		.number
+			margin-left: 0px!important
+		.count-i
+			display: flex
+			justify-content: space-between
+			align-items: center
+			&>div
+				text-align: center
+				width: 100px
+			&.solided
+				border-bottom: solid 1px #bababa
+			.h2
+				margin-bottom: 0px
+	.item .right-discr .fin-price
+		.h5
+			color: $dark
+		.h3
+			color: $dark
+			margin-bottom: 30px
+	.button--isi
+		width: 100%
+		max-width: 273px
+		text-align: center
+		font-size: 16px
+		font-weight: 700
+		&:before
+			width: 100%
+	.tabcontent
+		.sklad
+			&.prop-i
+				margin-bottom: 0px
+			.count-i
+				.h4
+					font-size: 12px
+				.h2
+					font-size: 14px
+				&>div
+					width: 50%
+					text-align: left
+					padding-bottom: 10px
+				&.solided
+					margin-bottom: 10px
+					&:last-child
+						border-bottom: none
+.tab-cont
+	margin-top: 10px
+/* Style the tab */
+div.tab
+	overflow: hidden
+	text-align: left
+	margin-bottom: 20px
+	display: inline-block 
+	padding-right: 20px
+	width: 100%
+	max-width: 273px
+	position: relative
+	&:after
+		content: ''
+		position: absolute
+		bottom: 1px
+		background: #bababa
+		width: 100%
+		height: 1px
+		z-index: 0
+		left: 0px
+	button
+		background-color: inherit
+		display: inline-block
+		outline: none
+		cursor: pointer
+		transition: 0.3s
+		color: $dark
+		z-index: 1
+		//background-color: #342a23
+		font-size: 14px
+		font-weight: 500
+		font-family: $default-font
+		position: relative
+		text-align: center
+		border: none
+		border-bottom: solid 3px transparent
+		-webkit-appearance: button
+		margin-right: 27px
+		&:hover
+		//background-color: #342a23
+		&.active
+			border-color: $accent
+			&:after
+				background: $accent
+				z-index: -1
+		&:last-of-type
+			margin-right: 0px
+/* Style the tab content */
+.tabcontent
+	display: none
+	padding: 0
+	p
+		color: $dark
+		white-space: normal
+.tabcontent
+	-webkit-animation: fadeEffect 1s
+	animation: fadeEffect .3s /* Fading effect takes 1 second */
+	padding: 0
+
+
+.fotorama__thumb-border
+	border-color: $accent
+.fotorama__thumb
+	position: relative
+	&:after
+		content: ''
+		background: transparent
+		border: solid 1px $grey
+		left: 0px
+		top: 0px
+		right: 0px
+		bottom: 0px
+		position: absolute
+.fotorama__nav
+	text-align: left
+.fotorama__nav--thumbs .fotorama__nav__frame
+	width: 119px
+	height: 90px
+.fotorama__nav__shaft
+	margin-top: 15px
+.fotorama__nav:after, .fotorama__stage:after
+	background-image: none
+	background: none
+.fotorama__nav:before, .fotorama__stage:before
+	background-image: none
+	background: none
+.fotorama__wrap
+	margin: auto
+
+.prod-hr
+	padding: 0px
+	margin-top: 60px
 /*merkuriy end*/
 
 @import "media" // Всегда в конце
