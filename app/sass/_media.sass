@@ -37,6 +37,9 @@
         width: 466px
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
+  .side-menu-cont
+    padding: 0px
+    margin-bottom: 20px
   #my-footer .lvl1
     .contact-us
       margin-top: 30px
@@ -108,14 +111,34 @@
     .lvl2-cat
       .item.basket
         padding-left: 5px
+        overflow: visible
       .item
         .txt
           font-size: 12px
           font-weight: 500
         .svg-cont
           margin-right: 3px
+  .filter-lvl1:after, .filter-lvl1:before
+    display: none
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 576px)
+  .catalog-cont
+    margin-left: -10px
+    margin-right: -10px
+  .pagination
+    padding: 0 5px
+    .arr
+      min-width: 32px
+  .filters-cont
+    margin-left: -15px
+    margin-right: -15px
+  .filter-lvl1
+    padding: 0 5px
+    .sort-b
+      padding: 10px 9px
+  #consult
+    margin-left: 10px
+    margin-right: 10px
   #my-footer .lvl2 .main-m
     margin-bottom: 0px
   #my-footer .lvl2 .h3
@@ -154,9 +177,18 @@
         &.basket
           margin-right: 0px
           min-width: 40px
-
   .slick-menu-top
     padding: 0px
+  .side-menu-cont
+    .cat-list
+      padding-left: 5px
+  .catalog-cont .item-cont
+    //padding-left: 10px
+    padding: 0px
+  .catalog-cont .item-cont .item .button
+    max-width: none
+    &:hover::before
+      width: 100%
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px)
 	/**/
@@ -179,7 +211,11 @@
 
 /* Medium Devices, Desktops */
 @media only screen and (min-width : 992px)
-  /**/
+  .col-lg-51
+    width: 20%
+    flex: 0 0 20%
+    max-width: 20%
+    padding: 0 5px
 
 /* Large Devices, Wide Screens */
 @media only screen and (min-width : 1200px)

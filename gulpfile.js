@@ -38,7 +38,7 @@ gulp.task('js', ['common-js'], function() {
 		// 'app/libs/Datetimepicker/datepicker-ru.js',
 		// 'app/libs/bootstrap-material-datetimepicker-gh-pages/js/moment-with-locales.min.js',
 		// 'app/libs/bootstrap-material-datetimepicker-gh-pages/js/bootstrap-material-datetimepicker.js',
-		'app/js/common.min.js', // Всегда в конце
+		//'app/js/common.min.js', // Всегда в конце
 		])
 	.pipe(concat('scripts.min.js'))
 	// .pipe(uglify()) // Минимизировать весь js (на выбор)
