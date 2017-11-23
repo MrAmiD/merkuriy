@@ -2217,6 +2217,93 @@ div.tab
 							color: $accent
 //category prod end
 
+//news Start
+.news-sec
+	padding: 0px
+.news-cat
+	.news-item-cont
+		margin-right: 0px
+		.news-item
+			border: solid 1px $grey
+			margin-bottom: 15px
+			.prev-cont
+				padding: 0px
+				.prev
+					width: 100%
+					height: 100%
+					min-height: 260px
+			.cont
+				.h2
+					font-size: 19px
+					font-weight: 700
+					margin: 35px 0px
+					&:hover
+						color: $accent
+				.m-link
+					text-align: right
+					display: block
+					margin-bottom: 10px
+					a
+						color: $accent
+						text-decoration: underline
+						&:hover
+							text-decoration: none
+//news End
+
+//contacts start
+
+.cont-side
+	ul
+		list-style: none
+		margin: 0px
+		padding: 0px
+		li
+			background: #e9edef
+			border-top: solid 1px #FFFFFF
+			a
+				font-size: 19px
+				font-weight: 500
+				display: block
+				width: 100%
+				height: 100%
+				padding: 10px 0px
+				padding-left: 20px
+				&:hover
+					color: #FFFFFF
+			&.active, &:hover
+				background: $accent
+				color: #FFFFFF
+				a
+					color: #ffffff
+.cotacts-item-cont
+	margin-bottom: 20px
+	.contacts-data
+		padding-top: 20px
+		.item-d
+			display: flex
+			align-items: center
+			margin-bottom: 10px
+			p
+				margin: 0px
+				font-size: 16px
+			.svg-cont
+				margin-right: 15px
+				background: $accent
+				width: 20px
+				height: 20px
+				display: flex
+				justify-content: center
+				align-items: center
+				border-radius: 50%
+				min-width: 20px
+				min-height: 20px
+
+.gisMap
+	background: $grey
+	min-height: 225px
+	height: 225px
+//contacts end
+
 /*merkuriy end*/
 
 @import "media" // Всегда в конце
