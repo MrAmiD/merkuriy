@@ -65,9 +65,48 @@ function openCity(evt, cityName) {
     evt.currentTarget.className += " active";
 }
 
-$(function() { 
+function categoryHeightFixed() {
+
+    var maxVal = 0;
+
+    $('.category-prod-c  .item-cont').each(function (index, value) {
+        if ($(this).height() > maxVal)
+            maxVal = $(this).height();
+
+    });
+
+    console.log('maxVal = ', maxVal);
+    $('.category-prod-c  .item-cont .item-cont').height = maxVal;
 
 
+}
+
+$(function() {
+
+    /*category item height Start*/
+    // var ulH_origin;
+    // $(".category-prod-c  .item-cont .item").hover(function() {
+    //     console.log('hovered');
+    //     ulH_origin = $(this).find('ul').height();
+    //     console.log('ulH_origin = ', ulH_origin);
+    //     var ul_h = 0,
+    //         ul_length = $(this).find('ul li').length,
+    //         ul_obj = $(this).find('ul');
+    //     $(this).find('ul li').each(function (index, value) {
+    //         ul_h += $(this).height() + 8;
+    //
+    //         if (index == ul_length - 1){//Воизбежание дичи
+    //             ul_obj.height(ul_h);
+    //         }
+    //     });
+    //
+    //
+    // },
+    // function() {
+    //     $(this).find('ul').height(ulH_origin);
+    //     console.log('hover out');
+    // });
+    /*category item height End*/
 
     /*for tabs start*/
     //    Default open Tabs
