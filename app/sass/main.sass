@@ -328,58 +328,48 @@ html.mm-opening .mm-menu~.mm-slideout
 .content
 	overflow-x: hidden
 	h1
-		text-align: center
+		text-align: left
 		font-family: $default-font
 		margin-top: 63px
 		font-size: 30px
 		text-transform: uppercase
 		position: relative
-		padding-bottom: 55px
 		margin-bottom: 14px
-		&:after
-			content: ''
-			position: absolute
-			width: 3px
-			height: 50px
-			background: $accent
-			left: 50%
-			transform: translateX(-50%)
-			bottom: -6px
 	h2
 		font-size: 24px
 		font-weight: 500
 		margin: 15px 0
 		margin-top: 30px
 		text-transform: uppercase
-		color: $accent
+		color: $dark
 	h3
 		font-size: 22px
 		font-weight: 500
 		margin: 15px 0
 		margin-top: 30px
 		text-transform: uppercase
-		color: $accent
+		color: $dark
 	h4
 		font-size: 20px
 		font-weight: 500
 		margin: 15px 0
 		margin-top: 30px
 		text-transform: uppercase
-		color: $accent
+		color: $dark
 	h5
 		font-size: 18px
 		font-weight: 500
 		margin: 15px 0
 		margin-top: 30px
 		text-transform: uppercase
-		color: $accent
+		color: $dark
 	h6
 		font-size: 16px
 		font-weight: 500
 		margin: 15px 0
 		margin-top: 30px
 		text-transform: uppercase
-		color: $accent
+		color: $dark
 	b
 		font-size: 16px
 		font-weight: 900
@@ -391,51 +381,40 @@ html.mm-opening .mm-menu~.mm-slideout
 		font-weight: 500
 	a
 		color: $accent
+		text-decoration: underline
 		&:hover, &:focus
-			text-decoration: underline
+			text-decoration: none
 	blockquote
-		font-weight: 900
-		font-size: 16px
-		line-height: 1.2
-		max-width: 360px
-		//padding-left: 45px
+		font-size: 12px
+		line-height: 1.7
+		padding-left: 45px
 		margin: 10px 0
 		position: relative
-		border-top: solid 3px $accent
-		border-bottom: solid 3px $accent
-		padding: 25px 0
-		//&:before
-		//	content: url('data:image/svg+xml; utf8, <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="31px" height="25px"><path fill-rule="evenodd"  fill="rgb(130, 182, 61)" d="M30.955,9.986 C30.899,11.881 30.652,13.744 29.950,15.516 C28.384,19.472 25.717,22.370 21.889,24.141 C21.330,24.400 20.765,24.646 20.191,24.904 C19.151,23.124 18.134,21.382 17.112,19.632 C19.722,18.382 21.435,16.442 21.937,13.469 C21.680,13.442 21.468,13.439 21.265,13.397 C19.324,12.995 18.036,11.772 17.298,9.964 C16.678,8.444 16.606,6.840 17.072,5.265 C17.752,2.967 19.393,1.697 21.618,1.128 C21.969,1.038 22.331,0.996 22.689,0.931 C23.155,0.931 23.621,0.931 24.088,0.931 C24.604,1.026 25.130,1.083 25.634,1.221 C28.266,1.939 29.824,3.750 30.584,6.342 C30.933,7.529 30.992,8.754 30.955,9.986 ZM13.220,15.709 C11.597,19.674 8.853,22.523 4.993,24.259 C4.514,24.474 4.031,24.680 3.531,24.898 C2.497,23.127 1.480,21.386 0.457,19.633 C3.066,18.380 4.779,16.441 5.281,13.470 C5.013,13.441 4.800,13.439 4.596,13.393 C2.328,12.874 0.972,11.376 0.387,9.158 C-0.015,7.635 0.001,6.079 0.644,4.612 C1.538,2.575 3.172,1.488 5.277,1.062 C5.523,1.013 5.771,0.975 6.019,0.931 C6.485,0.931 6.952,0.931 7.418,0.931 C7.934,1.025 8.461,1.081 8.965,1.219 C11.686,1.962 13.251,3.850 13.980,6.540 C14.321,7.797 14.337,9.087 14.283,10.378 C14.206,12.211 13.918,14.003 13.220,15.709 Z"/></svg>')
-		//	display: block
-		//	width: 22px
-		//	height: 10px
-		//	position: absolute
-		//	left: 0px
-		//	top: 0px
+		max-width: 520px
+		font-style: italic
+		&:before
+			content: url('data:image/svg+xml; utf8, <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="31px" height="25px"><path fill-rule="evenodd"  fill="rgb(12, 83, 158)" d="M30.955,9.986 C30.899,11.881 30.652,13.744 29.950,15.516 C28.384,19.472 25.717,22.370 21.889,24.141 C21.330,24.400 20.765,24.646 20.191,24.904 C19.151,23.124 18.134,21.382 17.112,19.632 C19.722,18.382 21.435,16.442 21.937,13.469 C21.680,13.442 21.468,13.439 21.265,13.397 C19.324,12.995 18.036,11.772 17.298,9.964 C16.678,8.444 16.606,6.840 17.072,5.265 C17.752,2.967 19.393,1.697 21.618,1.128 C21.969,1.038 22.331,0.996 22.689,0.931 C23.155,0.931 23.621,0.931 24.088,0.931 C24.604,1.026 25.130,1.083 25.634,1.221 C28.266,1.939 29.824,3.750 30.584,6.342 C30.933,7.529 30.992,8.754 30.955,9.986 ZM13.220,15.709 C11.597,19.674 8.853,22.523 4.993,24.259 C4.514,24.474 4.031,24.680 3.531,24.898 C2.497,23.127 1.480,21.386 0.457,19.633 C3.066,18.380 4.779,16.441 5.281,13.470 C5.013,13.441 4.800,13.439 4.596,13.393 C2.328,12.874 0.972,11.376 0.387,9.158 C-0.015,7.635 0.001,6.079 0.644,4.612 C1.538,2.575 3.172,1.488 5.277,1.062 C5.523,1.013 5.771,0.975 6.019,0.931 C6.485,0.931 6.952,0.931 7.418,0.931 C7.934,1.025 8.461,1.081 8.965,1.219 C11.686,1.962 13.251,3.850 13.980,6.540 C14.321,7.797 14.337,9.087 14.283,10.378 C14.206,12.211 13.918,14.003 13.220,15.709 Z"/></svg>')
+			display: block
+			width: 22px
+			height: 10px
+			position: absolute
+			left: 0px
+			top: 0px
 	table
 		width: 100%
 		tbody
 			min-width: 700px
-		&.compectCount
-			.prev-prod
-				width: 60px
-				height: 60px
-				margin: auto
-				margin-bottom: 15px
-				margin-top: 15px
-				background-size: contain
-				background-repeat: no-repeat
-				background-position: center
-				background-color: #FFFFFF
-				border: solid 1px #d9d9d9
 		tr
-			&:nth-child(odd)
-				background: #f7f7f7
+			&:first-child
+				background: $accent
+				td, th
+					color: #FFFFFF
 			td, th
-				border: solid 1px #d9d9d9
+				border: solid 1px $accent
 				padding-left: 15px
 				padding-right: 15px
-				text-align: center
+				text-align: left
+				
 	ul
 		list-style: none
 		margin-top: 20px
@@ -475,13 +454,32 @@ html.mm-opening .mm-menu~.mm-slideout
 		padding-left: 0px
 		margin-top: 20px
 		li
-			font-weight: 700
+			font-weight: 500
+			display: flex
+			align-items: flex-start
 			&:before
-				content: counter(item) ') '
+				content: counter(item)
 				counter-increment: item
+				background: $accent
+				color: #FFFFFF
+				width: 20px
+				height: 20px
+				min-width: 20px
+				min-height: 20px
+				display: flex
+				border-radius: 50%
+				justify-content: center
+				align-items: center
+				margin-right: 10px
+				position: relative
+				top: 3px
 
 .bread-c
 	background: #e9edef
+
+.container-fluid.solided
+	padding: 0px
+	border-bottom: 1px solid $grey
 
 .breadcrumb
 	padding: 0
