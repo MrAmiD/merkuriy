@@ -1,4 +1,29 @@
-
+function bascetScripts() {
+    $(document).on( "click", ".step2-trigger", function() {
+        $('.mine-basket').hide();
+        $('.order-form-b').fadeIn();
+        $('.steps-tr').removeClass('active');
+        $(this).addClass('active');
+    });
+    $(document).on( "click", ".step1-trigger", function() {
+        $('.order-form-b').hide();
+        $('.mine-basket').fadeIn();
+        $('.steps-tr').removeClass('active');
+        $(this).addClass('active');
+    });
+    $(document).on( "click", ".pers2-trigger", function() {
+        $('.fiz-face').hide();
+        $('.ur-face form').fadeIn();
+        $('.persons-tr').removeClass('active');
+        $(this).addClass('active');
+    });
+    $(document).on( "click", ".pers1-trigger", function() {
+        $('.ur-face form').hide();
+        $('.fiz-face').fadeIn();
+        $('.persons-tr').removeClass('active');
+        $(this).addClass('active');
+    });
+}
 function MainSliderInit() {//слайдер на главной странице
     $('.main-slider').slick({
         prevArrow: '<button type="button" class="slick-prev sliderAboutArrow">' +
@@ -82,7 +107,9 @@ function categoryHeightFixed() {
 }
 
 $(function() {
-
+    
+    
+    
     /*category item height Start*/
     // var ulH_origin;
     // $(".category-prod-c  .item-cont .item").hover(function() {

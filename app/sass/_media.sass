@@ -35,6 +35,8 @@
     .service-list
       .content-s
         width: 466px
+  .table-basket .count-td
+    padding: 0px
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
   .side-menu-cont
@@ -148,6 +150,34 @@
       display: block
       min-width: 500px
       width: 100%
+
+  .table-basket
+    .goods-td
+      border-left: solid 1px $grey
+    .name-td
+      border-top: solid 1px $grey
+    .goods-tbl
+      border: solid 1px $accent
+      border-bottom: none
+    .price-td
+      display: flex
+      justify-content: space-between
+    .summ-td
+      .delete-item
+        width: 90px
+    .tbl-h-cont .h-tbl
+      margin-right: -1px
+    .h-txt-m
+      color: #bbb
+      font-weight: 700
+      font-size: 14px
+    .count-td
+      padding: 0 15px
+      display: flex
+      justify-content: space-between
+    .summ-td
+      display: flex
+      justify-content: space-between
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 576px)
 
