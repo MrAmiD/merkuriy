@@ -995,6 +995,8 @@ html.mm-opening .mm-menu~.mm-slideout
 						background: $accent
 						color: #FFFFFF
 				display: block
+				&:hover
+					z-index: 10
 	.button--moema
 		padding: 5px 15px
 		background: #FFFFFF
@@ -1004,7 +1006,8 @@ html.mm-opening .mm-menu~.mm-slideout
 			color: #FFFFFF
 		&:before
 			top: -15px
-			left: -20px
+			left: -8px
+			right: -8px
 			bottom: -14px
 	.lvl2-cat
 		min-height: 130px
@@ -1033,7 +1036,7 @@ html.mm-opening .mm-menu~.mm-slideout
 						height: 300px
 			.svg-cont
 				background: $accent
-				margin-left: 5px
+				margin-left: 10px
 				margin-right: 12px
 				width: 34px
 				height: 34px
@@ -1051,12 +1054,12 @@ html.mm-opening .mm-menu~.mm-slideout
 					transition: all .8s ease
 				svg
 					display: block
-					width: 34px
-					height: 34px
-					left: 5px
-					position: relative
-					padding-top: 9px
-					padding-left: 3px
+					//width: 34px
+					//height: 34px
+					//left: 5px
+					//position: relative
+					//padding-top: 9px
+					//padding-left: 3px
 			&.find-btn
 				padding: 0px
 				width: 40px
@@ -1081,6 +1084,7 @@ html.mm-opening .mm-menu~.mm-slideout
 				padding-left: 8px
 				.svg-cont-b
 					position: relative
+					top: 4px
 					&:before
 						content: attr(cont)
 						position: absolute
@@ -1224,7 +1228,7 @@ html.mm-opening .mm-menu~.mm-slideout
 			z-index: -1
 			position: relative
 	.slick-prev
-		left: calc(50% + 455px)
+		left: calc(50% + 445px)
 		z-index: 1
 		transition: background-color .3s ease
 		svg
@@ -1237,7 +1241,7 @@ html.mm-opening .mm-menu~.mm-slideout
 			top: -2px
 			left: -3px
 	.slick-next
-		left: calc(50% + 520px)
+		left: calc(50% + 510px)
 		z-index: 1
 		transition: background-color .3s ease
 		svg
@@ -1966,6 +1970,7 @@ html.mm-opening .mm-menu~.mm-slideout
 		border-bottom-left-radius: 5px
 		display: block
 		cursor: pointer
+		z-index: 15
 		&.disabled
 			opacity: 0.7
 			pointer-events: none
@@ -1989,7 +1994,11 @@ html.mm-opening .mm-menu~.mm-slideout
 				font-weight: 700
 				margin: 0px
 				line-height: 1.4
-
+.cat-list
+	position: sticky
+	top: 60px
+.side-menu-cont
+	padding-bottom: 54px
 .an-h
 	margin: 35px 0px
 
