@@ -305,7 +305,7 @@ html.mm-opening .mm-menu~.mm-slideout
 			&.active
 				color: $accent
 			&:hover
-				background: #444243
+				background: transparent
 				color: $accent
 			text-align: left
 			font-family: $default-font
@@ -849,6 +849,19 @@ html.mm-opening .mm-menu~.mm-slideout
 		font-weight: 500
 
 
+.btn-round-accent
+	background: transparent
+	padding: 5px 15px
+	color: $dark
+	border-radius: 100px
+	display: inline-block
+	font-size: 14px
+	min-width: 130px
+	text-align: center
+	&:hover
+		background: $accent
+		color: #FFFFFF
+
 .btn-transparent
 	border: solid 1px $accent
 	border-radius: 5px
@@ -976,6 +989,50 @@ html.mm-opening .mm-menu~.mm-slideout
 
 #my-header
 	padding-top: 44px
+	.item.basket
+		min-width: 40px
+		padding-left: 0px
+		height: 100%
+		display: flex
+		align-items: center
+		justify-content: center
+		.svg-cont-b
+			position: relative
+			top: 4px
+			&:before
+				content: attr(cont)
+				position: absolute
+				top: -6px
+				right: -9px
+				width: 18px
+				height: 18px
+				border-radius: 50%
+				color: #ffffff
+				background: $accent2
+				line-height: 20px
+				z-index: 1
+				font-size: 10px
+				font-weight: 700
+				text-align: center
+		.txt
+			line-height: 1
+			padding-left: 10px
+		.txt-b
+			line-height: 1
+			font-size: 16px
+			font-weight: 700
+		.summ
+			line-height: 1
+			font-size: 11px
+			font-weight: 700
+		&:hover
+			background: #FFFFFF
+			border-color: $accent
+			a
+				color: $dark
+			div
+				transition: none
+
 	.slick-menu-top
 		position: fixed
 		width: 100%
@@ -994,9 +1051,16 @@ html.mm-opening .mm-menu~.mm-slideout
 					a
 						background: $accent
 						color: #FFFFFF
+						border: solid 1px transparent
+						&:hover
+							border-color: $accent
+							background: #FFFFFF
+							color: $accent
 				display: block
 				&:hover
 					z-index: 10
+		.basket-li
+			display: none
 	.button--moema
 		padding: 5px 15px
 		background: #FFFFFF
@@ -1051,7 +1115,7 @@ html.mm-opening .mm-menu~.mm-slideout
 					border-radius: 50%
 					display: block
 					z-index: -1
-					transition: all .8s ease
+					transition: all .3s ease
 				svg
 					display: block
 					//width: 34px
@@ -1082,35 +1146,6 @@ html.mm-opening .mm-menu~.mm-slideout
 			&.basket
 				min-width: 188px
 				padding-left: 8px
-				.svg-cont-b
-					position: relative
-					top: 4px
-					&:before
-						content: attr(cont)
-						position: absolute
-						top: -6px
-						right: -9px
-						width: 18px
-						height: 18px
-						border-radius: 50%
-						color: #ffffff
-						background: $accent2
-						line-height: 20px
-						z-index: 1
-						font-size: 10px
-						font-weight: 700
-						text-align: center
-				.txt
-					line-height: 1
-					padding-left: 10px
-				.txt-b
-					line-height: 1
-					font-size: 16px
-					font-weight: 700
-				.summ
-					line-height: 1
-					font-size: 11px
-					font-weight: 700
 				&:hover
 					background: #FFFFFF
 					border-color: $accent
@@ -1261,12 +1296,19 @@ html.mm-opening .mm-menu~.mm-slideout
 		background-color: rgba(0, 0, 0, 0.412)
 		left: calc(50% - 570px)
 		border-radius: 50px
+		li
+			margin: 0px
+			&:first-child
+				margin-left: 5px
+			&:last-child
+				margin-right: 5px
 	.slick-dots li.slick-active button:before
 		color: $accent2
 	.slick-dots li button:before
 		color: $grey-l
 		opacity: 1
 		font-size: 10px
+		line-height: 22px
 .slick-dotted.slick-slider
 	margin-bottom: 0px
 

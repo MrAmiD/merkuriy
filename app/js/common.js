@@ -24,7 +24,7 @@ function bascetScripts() {
         $(this).addClass('active');
     });
 }
-function MainSliderInit() {//слайдер на главной странице
+function MainSliderInit(){//слайдер на главной странице
     $('.main-slider').slick({
         prevArrow: '<button type="button" class="slick-prev sliderAboutArrow">' +
         '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="9px" height="15px"> <path fill-rule="evenodd"  fill="rgb(0, 0, 0)" d="M9.006,1.033 C8.971,1.061 8.934,1.087 8.902,1.118 C6.805,3.175 4.709,5.231 2.612,7.288 C2.580,7.319 2.549,7.352 2.508,7.395 C2.547,7.437 2.582,7.477 2.621,7.514 C4.710,9.564 6.799,11.613 8.890,13.662 C8.924,13.696 8.967,13.723 9.006,13.753 C9.006,13.783 9.006,13.812 9.006,13.842 C8.859,13.979 8.710,14.113 8.566,14.253 C8.306,14.506 8.048,14.762 7.806,15.000 C5.210,12.455 2.621,9.917 -0.005,7.343 C0.017,7.331 0.075,7.312 0.114,7.274 C2.544,4.893 4.973,2.511 7.402,0.129 C7.571,-0.037 7.972,-0.038 8.140,0.126 C8.428,0.408 8.717,0.691 9.006,0.973 C9.006,0.993 9.006,1.013 9.006,1.033 Z"/></svg>' +
@@ -105,36 +105,23 @@ function categoryHeightFixed() {
 
 
 }
+function showBasketScroll() {//для показа корзины в шапке, при прокрутке страницы
+    var topOffset = $('#my-header').height() - $('.slick-menu-top').height(),
+        scrollTop = $(document).scrollTop();
+    if(scrollTop > topOffset){
+        console.log('----show basket');
+        $('.main-menu .basket-li').fadeIn();
+    } else{
+        $('.main-menu .basket-li').fadeOut();
+    }
+
+}
 
 $(function() {
-    
-    
-    
-    /*category item height Start*/
-    // var ulH_origin;
-    // $(".category-prod-c  .item-cont .item").hover(function() {
-    //     console.log('hovered');
-    //     ulH_origin = $(this).find('ul').height();
-    //     console.log('ulH_origin = ', ulH_origin);
-    //     var ul_h = 0,
-    //         ul_length = $(this).find('ul li').length,
-    //         ul_obj = $(this).find('ul');
-    //     $(this).find('ul li').each(function (index, value) {
-    //         ul_h += $(this).height() + 8;
-    //
-    //         if (index == ul_length - 1){//Воизбежание дичи
-    //             ul_obj.height(ul_h);
-    //         }
-    //     });
-    //
-    //
-    // },
-    // function() {
-    //     $(this).find('ul').height(ulH_origin);
-    //     console.log('hover out');
-    // });
-    /*category item height End*/
-
+    showBasketScroll();
+    $(window).scroll(function() {
+        showBasketScroll();
+    });
     /*for tabs start*/
     //    Default open Tabs
     $("#defaultOpen1").click(function(){
@@ -163,7 +150,8 @@ $(function() {
 
 
     $('#my-menu').html($('.main-menu').html());
-    $('#my-menu .button--moema').removeAttr("class");
+    // $('#my-menu .button--moema').removeAttr("class");
+    $('#my-menu .btn-round-accent').removeAttr("class");
     $('#my-menu ul').removeClass('d-flex', 'justify-content-between');
     //var  socials = $("#my-menu").data();
     $("#my-menu").mmenu({
