@@ -545,6 +545,23 @@ html.mm-opening .mm-menu~.mm-slideout
 	display: flex
 	//margin-top: 20px
 	margin-bottom: 4px
+	position: relative
+	&:after
+		content: ''
+		position: absolute
+		width: 100%
+		height: 1px
+		background: #ddd
+		top: 0px
+		left: 0px
+	&:before
+		content: ''
+		position: absolute
+		width: 100%
+		height: 1px
+		background: #ddd
+		bottom: 0px
+		left: 0px
 	.arr
 		min-width: 95px
 		min-height: 32px
@@ -651,7 +668,7 @@ html.mm-opening .mm-menu~.mm-slideout
 
 
 #consult, .popup
-	background-image: url(../img/bg-gr.png)
+	//background-image: url(../img/bg-gr.png)
 	background-position: right
 	.container
 		max-width: 460px
@@ -666,14 +683,22 @@ html.mm-opening .mm-menu~.mm-slideout
 		margin-bottom: 25px
 	p
 		color: $dark
-		margin-top: 20px
+		margin-top: 5px
 		font-size: 16px
+		line-height: 1.7
 		b
 			font-weight: 900
+	.warn-user
+		margin-top: 0px
+		font-size: 12px
+		color: #0c539e
+		margin-bottom: 11px
 	a
 		color: $dark
+		text-decoration: underline
 		&:hover, &:focus
-			text-decoration: underline
+			text-decoration: none
+			color: $accent
 	label
 		color: $dark!important
 	input
@@ -686,6 +711,8 @@ html.mm-opening .mm-menu~.mm-slideout
 		margin-bottom: 10px
 		border-radius: 0px
 		padding-left: 15px
+		font-size: 14px
+		border-radius: 5px
 		&::-webkit-input-placeholder
 			color: #6d6d6d
 			opacity: 1
@@ -709,21 +736,25 @@ html.mm-opening .mm-menu~.mm-slideout
 		padding-left: 15px
 		background: rgba(255, 255, 255, 0.26)
 		font-size: 18px
+		border-radius: 5px
 		&::-webkit-input-placeholder
 			color: #6d6d6d
 			opacity: 1
 			font-size: 14px
 			font-weight: 500
+			line-height: 35px
 		&:-moz-placeholder
 			color: #6d6d6d
 			opacity: 1
 			font-size: 14px
 			font-weight: 500
+			line-height: 35px
 		&::-moz-placeholder
 			color: #6d6d6d
 			opacity: 1
 			font-size: 14px
 			font-weight: 500
+			line-height: 35px
 	.client-msg
 		display: none
 	.fancybox-close-small
@@ -747,7 +778,7 @@ html.mm-opening .mm-menu~.mm-slideout
 	.content-txt
 		text-align: center
 		position: relative
-		padding-top: 80px
+		padding-top: 10px
 		//top: 50%
 		//transform: translateY(-50%)
 		vertical-align: middle
@@ -756,6 +787,7 @@ html.mm-opening .mm-menu~.mm-slideout
 		.h1
 			color: $dark
 			font-size: 45px
+			color: $accent
 		.txt-p
 			color: $dark
 			font-size: 18px
@@ -920,6 +952,9 @@ html.mm-opening .mm-menu~.mm-slideout
 		border-bottom-left-radius: 5px
 		background: #FFFFFF
 		z-index: 2
+		max-height: 320px
+		overflow-y: auto
+		+custom-scroll($accent)
 		li
 			color: $dark
 			width: 100%
@@ -1712,16 +1747,26 @@ html.mm-opening .mm-menu~.mm-slideout
 		margin: 0px
 		border: solid 1px $grey
 		border-top: none
+		overflow: auto
+		max-height: 80vh
+		+custom-scroll($accent)
 		li
 			border-bottom: 1px solid $grey
 			padding: 3px 0px
 			display: block
+			border-top: 1px solid transparent
+			&:first-of-type:hover
+				background: $accent
+				border-top-color: #FFFFFF!important
+				a
+					color: #FFFFFF!important
 			&:hover
 				background: $accent
 				a
-					color: #FFFFFF
+					color: #FFFFFF!important
 			a
 				padding-left: 21px
+				padding-right: 21px
 				display: inline-block
 				width: 100%
 				height: 100%
@@ -1730,6 +1775,9 @@ html.mm-opening .mm-menu~.mm-slideout
 				&:hover
 					color: #FFFFFF
 					background: $accent
+			&.active
+				a
+					color: $accent
 .filter-lvl1
 	position: relative
 	overflow: hidden
@@ -1880,6 +1928,8 @@ html.mm-opening .mm-menu~.mm-slideout
 				font-size: 14px
 				padding: 0px 15px
 				line-height: 1.7
+				height: 46px
+				overflow: hidden
 			.price
 				font-weight: 900
 				font-size: 22px
@@ -1916,14 +1966,22 @@ html.mm-opening .mm-menu~.mm-slideout
 					display: flex
 					align-items: flex-start
 					align-content: flex-start
+					flex-wrap: wrap
 					.item
-						width: 25px
-						height: 25px
+						//width: 25px
+						//height: 25px
+						margin-bottom: 8px
 						border-radius: 50%
 						margin-right: 6px
 						cursor: pointer
+						border: 1px solid transparent
+						img
+							width: 100%
+							object-fit: contain
 						&.active
-							border: solid 2px $dark
+							//border: solid 2px $dark
+							border: 1px solid $accent2
+							border-radius: 0px
 						&:hover
 							opacity: 0.8
 				.prop-price
@@ -1944,13 +2002,14 @@ html.mm-opening .mm-menu~.mm-slideout
 							color: #BEBEBE
 					.number
 						margin-left: 30px
+						margin-bottom: 8px
 				.fin-price
 					.h5
 						font-weight: 900
 						font-size: 14px
-						color: $accent2
+						color: $accent2!important
 					.h3
-						color: $accent2
+						color: $accent2!important
 						font-size: 27px
 			.h3.solided
 				border-bottom: 1px solid #bababa
@@ -1961,9 +2020,12 @@ html.mm-opening .mm-menu~.mm-slideout
 				padding-bottom: 10px
 				margin-top: 30px
 			.prop-goods
+				display: flex
+				flex-wrap: wrap
+				flex-basis: 50%
 				.single-prop
 					display: inline-block
-					margin-right: 50px
+					flex-basis: 50%
 					&:last-child
 						margin-right: 0px
 					.grey-h3
@@ -2051,7 +2113,7 @@ html.mm-opening .mm-menu~.mm-slideout
 
 .catalog-cont.goods-item
 	.item-cont-ls
-		margin-bottom: 0px
+		margin-bottom: 15px
 		&:hover
 			border-color: #ddd
 		&>.item
@@ -2222,6 +2284,9 @@ div.tab
 				box-shadow: 4.326px 13.315px 44.28px 9.72px rgba(0, 0, 1, 0.07)
 				z-index: 10
 				ul
+					overflow-y: auto
+					max-height: 320px
+					+custom-scroll($accent)
 					li
 						display: block!important
 			.prev
@@ -2252,6 +2317,7 @@ div.tab
 				display: block
 				width: 100%
 				padding-bottom: 5px
+				max-height: 370px
 				li
 					margin-bottom: 5px
 					line-height: 1.2
@@ -2270,6 +2336,8 @@ div.tab
 //news Start
 .news-sec
 	padding: 0px
+	.news-cont
+		padding-right: 0px
 .news-cat
 	.news-item-cont
 		margin-right: 0px
@@ -2400,13 +2468,20 @@ div.tab
 			border-left: solid 1px #e9edef
 	.name-td
 		justify-content: space-between
+		.prod-name
+			line-height: 1.2
+			padding: 15px
+			padding-left: 0px
+			font-size: 14px
 		img
 			border-left: solid 2px #e9edef
 			display: block
-			min-width: 60px
+			width: 60px
 			padding-left: 15px
 			padding-top: 15px
 			padding-bottom: 15px
+			object-fit: contain
+			height: 100%
 	.price-td
 		font-weight: 700
 		font-size: 14px
@@ -2429,6 +2504,11 @@ div.tab
 			cursor: pointer
 			height: 100%
 			border-left: solid 1px #e9edef
+			display: flex
+			align-items: center
+			justify-content: center
+			button
+				background: transparent
 		.svg-cont
 			height: 100%
 			display: flex

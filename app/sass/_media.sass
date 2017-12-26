@@ -39,6 +39,9 @@
     padding: 0px
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
+  .news-sec
+    .news-cont
+      padding-left: 0px
   #my-header .lvl2-cat .item
     width: 174px
     &.find-btn
@@ -104,6 +107,10 @@
     margin-bottom: 40px
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
+  .pagination
+    &:after,&:before
+      display: none
+
   .news-cat .news-item-cont .news-item .prev-cont .prev
     min-height: 165px
   #my-footer .lvl2

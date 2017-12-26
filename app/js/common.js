@@ -95,14 +95,18 @@ function categoryHeightFixed() {
     var maxVal = 0;
 
     $('.category-prod-c  .item-cont').each(function (index, value) {
-        if ($(this).height() > maxVal)
-            maxVal = $(this).height();
+
+        if ($(this).find('.cont-ul').height() > maxVal)
+            maxVal = $(this).find('.cont-ul').height();
 
     });
 
     console.log('maxVal = ', maxVal);
-    $('.category-prod-c  .item-cont .item-cont').height = maxVal;
+    $('.category-prod-c .item-cont .item .cont-ul').css('min-height', maxVal+'px');
 
+    $('.category-prod-c .item-cont').css('min-height', 157 + maxVal+'px');
+
+    //157 + maxVal
 
 }
 function showBasketScroll() {//для показа корзины в шапке, при прокрутке страницы
