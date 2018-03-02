@@ -1193,7 +1193,7 @@ html.mm-opening .mm-menu~.mm-slideout
 			right: 10px
 			left: 0px
 			bottom: 7px
-			display: none
+			display: block
 			&:before
 				content: url('data:image/svg+xml; utf8, <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20px" height="19px"> <path fill-rule="evenodd" fill="rgb(217, 217, 217)" d="M7.754,0.000 C8.124,0.062 8.500,0.101 8.864,0.189 C10.986,0.706 12.573,1.932 13.614,3.849 C14.301,5.116 14.555,6.481 14.425,7.913 C14.334,8.914 14.039,9.857 13.545,10.735 C13.509,10.799 13.473,10.864 13.421,10.958 C13.792,11.321 14.169,11.685 14.540,12.056 C15.883,13.397 17.234,14.729 18.559,16.088 C19.033,16.573 19.094,17.209 18.924,17.840 C18.754,18.464 18.311,18.863 17.673,18.963 C17.049,19.062 16.463,18.951 15.984,18.469 C14.386,16.860 12.778,15.259 11.176,13.654 C11.102,13.580 11.043,13.491 11.005,13.445 C10.468,13.675 9.993,13.914 9.495,14.085 C8.328,14.483 7.126,14.582 5.916,14.329 C3.108,13.743 1.246,12.069 0.324,9.362 C0.171,8.912 0.130,8.423 0.036,7.952 C0.025,7.898 0.012,7.845 -0.000,7.791 C-0.000,7.420 -0.000,7.049 -0.000,6.678 C0.011,6.637 0.029,6.597 0.032,6.556 C0.092,5.837 0.253,5.140 0.541,4.481 C1.562,2.147 3.312,0.690 5.806,0.143 C6.093,0.080 6.387,0.047 6.678,0.000 C7.037,0.000 7.395,0.000 7.754,0.000 ZM2.072,7.279 C2.100,10.130 4.429,12.424 7.287,12.384 C10.125,12.345 12.397,10.064 12.385,7.194 C12.373,4.320 10.032,2.047 7.148,2.073 C4.323,2.100 2.044,4.437 2.072,7.279 Z"></path></svg>')
 				position: absolute
@@ -1441,6 +1441,7 @@ html.mm-opening .mm-menu~.mm-slideout
 				background-size: cover
 				background-position: center
 			.txt-block
+				width: 100%
 				.h3
 					font-size: 21px
 					font-weight: 900
@@ -1469,13 +1470,14 @@ html.mm-opening .mm-menu~.mm-slideout
 			left: 0px
 			right: 0px
 			bottom: 0px
-			background-image: url("../img/printBg.png")
+			background-image: url(../img/footer-bg.png)
 			background-position: center
 			background-size: cover
-			opacity: 0.17
 		.content-s
 			width: 566px
 			padding-right: 15px
+			position: relative
+			z-index: 1
 			.h3
 				color: #FFFFFF
 				font-size: 30px
