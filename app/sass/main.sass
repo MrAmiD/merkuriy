@@ -78,9 +78,10 @@ body
 p
 	font-family: $default-font
 	font-size: 16px
-	color: $dark
+	color: $dark-l
 	font-weight: 500
 	line-height: 26px
+
 a
 	text-decoration: none
 	color: $dark
@@ -1076,6 +1077,48 @@ html.mm-opening .mm-menu~.mm-slideout
 		background: #fff
 		z-index: 11
 		box-shadow: 0px 1px 4.65px 0.35px rgba(0, 0, 0, 0.26)
+		padding-top: 5px
+		padding-bottom: 5px
+		.find-block
+			position: relative
+			right: 10px
+			margin-left: 10px
+			bottom: 0px
+			display: none
+			margin-top: 10px
+			margin-bottom: 0px
+			display: none
+			&:before
+				content: url('data:image/svg+xml; utf8, <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20px" height="19px"> <path fill-rule="evenodd" fill="rgb(217, 217, 217)" d="M7.754,0.000 C8.124,0.062 8.500,0.101 8.864,0.189 C10.986,0.706 12.573,1.932 13.614,3.849 C14.301,5.116 14.555,6.481 14.425,7.913 C14.334,8.914 14.039,9.857 13.545,10.735 C13.509,10.799 13.473,10.864 13.421,10.958 C13.792,11.321 14.169,11.685 14.540,12.056 C15.883,13.397 17.234,14.729 18.559,16.088 C19.033,16.573 19.094,17.209 18.924,17.840 C18.754,18.464 18.311,18.863 17.673,18.963 C17.049,19.062 16.463,18.951 15.984,18.469 C14.386,16.860 12.778,15.259 11.176,13.654 C11.102,13.580 11.043,13.491 11.005,13.445 C10.468,13.675 9.993,13.914 9.495,14.085 C8.328,14.483 7.126,14.582 5.916,14.329 C3.108,13.743 1.246,12.069 0.324,9.362 C0.171,8.912 0.130,8.423 0.036,7.952 C0.025,7.898 0.012,7.845 -0.000,7.791 C-0.000,7.420 -0.000,7.049 -0.000,6.678 C0.011,6.637 0.029,6.597 0.032,6.556 C0.092,5.837 0.253,5.140 0.541,4.481 C1.562,2.147 3.312,0.690 5.806,0.143 C6.093,0.080 6.387,0.047 6.678,0.000 C7.037,0.000 7.395,0.000 7.754,0.000 ZM2.072,7.279 C2.100,10.130 4.429,12.424 7.287,12.384 C10.125,12.345 12.397,10.064 12.385,7.194 C12.373,4.320 10.032,2.047 7.148,2.073 C4.323,2.100 2.044,4.437 2.072,7.279 Z"></path></svg>')
+				position: absolute
+				left: 5px
+				top: 5px
+				width: 30px
+				height: 30px
+				z-index: 2
+			input
+				width: 100%
+				height: 30px
+				border-radius: 0px
+				position: relative
+				display: block
+				padding-left: 28px
+			.button
+				background: $accent2
+				position: absolute
+				top: 5px
+				right: 15px
+				color: #FFFFFF
+				font-weight: 700
+				min-width: 0px
+				font-size: 12px
+				padding: 0px 10px
+				&:before
+					top: -11px
+					left: -4px
+					right: 0px
+					bottom: -10px
+
 	.main-menu
 		ul
 			list-style: none
@@ -1193,7 +1236,7 @@ html.mm-opening .mm-menu~.mm-slideout
 			right: 10px
 			left: 0px
 			bottom: 7px
-			display: block
+			display: none
 			&:before
 				content: url('data:image/svg+xml; utf8, <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20px" height="19px"> <path fill-rule="evenodd" fill="rgb(217, 217, 217)" d="M7.754,0.000 C8.124,0.062 8.500,0.101 8.864,0.189 C10.986,0.706 12.573,1.932 13.614,3.849 C14.301,5.116 14.555,6.481 14.425,7.913 C14.334,8.914 14.039,9.857 13.545,10.735 C13.509,10.799 13.473,10.864 13.421,10.958 C13.792,11.321 14.169,11.685 14.540,12.056 C15.883,13.397 17.234,14.729 18.559,16.088 C19.033,16.573 19.094,17.209 18.924,17.840 C18.754,18.464 18.311,18.863 17.673,18.963 C17.049,19.062 16.463,18.951 15.984,18.469 C14.386,16.860 12.778,15.259 11.176,13.654 C11.102,13.580 11.043,13.491 11.005,13.445 C10.468,13.675 9.993,13.914 9.495,14.085 C8.328,14.483 7.126,14.582 5.916,14.329 C3.108,13.743 1.246,12.069 0.324,9.362 C0.171,8.912 0.130,8.423 0.036,7.952 C0.025,7.898 0.012,7.845 -0.000,7.791 C-0.000,7.420 -0.000,7.049 -0.000,6.678 C0.011,6.637 0.029,6.597 0.032,6.556 C0.092,5.837 0.253,5.140 0.541,4.481 C1.562,2.147 3.312,0.690 5.806,0.143 C6.093,0.080 6.387,0.047 6.678,0.000 C7.037,0.000 7.395,0.000 7.754,0.000 ZM2.072,7.279 C2.100,10.130 4.429,12.424 7.287,12.384 C10.125,12.345 12.397,10.064 12.385,7.194 C12.373,4.320 10.032,2.047 7.148,2.073 C4.323,2.100 2.044,4.437 2.072,7.279 Z"></path></svg>')
 				position: absolute
@@ -1224,6 +1267,8 @@ html.mm-opening .mm-menu~.mm-slideout
 					left: -4px
 					right: 0px
 					bottom: -10px
+
+
 
 
 //mainpage start
@@ -1617,11 +1662,10 @@ html.mm-opening .mm-menu~.mm-slideout
 		max-width: 930px
 #my-footer
 	.lvl1
-		margin-top: 12px
-		margin-bottom: 12px
 		.cont-data
 			p
 				margin-bottom: 0px
+				margin-top: 20px
 		.contact-us
 			width: 100%
 			.item
@@ -1713,6 +1757,9 @@ html.mm-opening .mm-menu~.mm-slideout
 			margin: 0px
 			font-size: 12px
 			color: #FFFFFF
+	.map-c
+		min-height: 450px
+		padding: 0px
 //mainpage END
 
 //category-podcategory start

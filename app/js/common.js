@@ -113,12 +113,12 @@ function showBasketScroll() {//для показа корзины в шапке,
     var topOffset = $('#my-header').height() - $('.slick-menu-top').height(),
         scrollTop = $(document).scrollTop();
     if(scrollTop > topOffset){
-        console.log('----show basket');
         $('.main-menu .basket-li').fadeIn();
+        $('#my-header .slick-menu-top .find-block').slideDown();
     } else{
         $('.main-menu .basket-li').fadeOut();
+        $('#my-header .slick-menu-top .find-block').slideUp();
     }
-
 }
 
 $(function() {
@@ -192,12 +192,20 @@ $(function() {
         $(window).scroll();
         $(".slick-menu-top").css({ top: $(window).scrollTop()});
     });
+
+    api.bind( "open:before", function() {
+        $('#my-menu').css('top', $('#my-header .slick-menu-top').outerHeight());
+    });
+
     api.bind( "open:start", function() {
         $(window).scroll();
 
         //bugfix fixed menu 2
         $(".slick-menu-top").css({ top: $(window).scrollTop() });
     });
+
+
+
     api.bind( "close:finish", function( $panel ) {
         $("#menu-btn").removeClass('is-active');
 
@@ -243,7 +251,7 @@ $(function() {
     $(document).on( "click", "#openFind", function() {
         if($(this).hasClass('active')){
             $(this).removeClass('active');
-            $('.find-block').fadeIn();
+            $('#my-header .lvl2-cat .find-block').fadeIn();
         }
         else {
             $(this).addClass('active');
